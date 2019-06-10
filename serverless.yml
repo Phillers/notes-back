@@ -1,5 +1,5 @@
 # NOTE: update this with your service name
-service: notes-app-api
+service: notes-api
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:
@@ -97,6 +97,10 @@ functions:
           method: delete
           cors: true
           authorizer: aws_iam
+# Create our resources with separate CloudFormation templates
+resources:
+  # API Gateway Errors
+  - ${file(resources/api-gateway-errors.yml)}
           
   hello:
     handler: handler.hello
