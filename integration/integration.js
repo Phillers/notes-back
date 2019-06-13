@@ -7,9 +7,8 @@ const request = require('supertest');
  */
 
 
-describe('API — teamsByGame',() => {
+describe('API — notes',() => {
   const server = request("http://localhost:3000");
-  
   it('POST /notes', (done) => {
     server.post('/notes')
       .send("{\"content\":\"hello world\",\"attachment\":\"hello.jpg\"}")
