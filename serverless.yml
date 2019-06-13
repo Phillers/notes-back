@@ -5,6 +5,7 @@ service: notes-api
 plugins:
   - serverless-webpack
   - serverless-offline
+#  - serverless-mocha-plugin
 
 # serverless-webpack configuration
 # Enable auto-packing of external modules
@@ -26,7 +27,11 @@ custom:
   # Load our secret environment variables based on the current stage.
   # Fallback to default if it is not in prod.
   environment: ${file(env.yml):${self:custom.stage}, file(env.yml):default}
-
+ # serverless-mocha-plugin:
+ #   preTestCommands:
+ #     - bash integration/startOffline.sh
+ #   postTestCommands:
+ #     - bash integration/stopOffline.sh
 provider:
   name: aws
   runtime: nodejs8.10

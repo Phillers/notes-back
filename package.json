@@ -13,7 +13,6 @@
     "url": "https://github.com/AnomalyInnovations/serverless-nodejs-starter.git"
   },
   "devDependencies": {
-    "aws-amplify": "^1.1.28",
     "aws-sdk": "^2.472.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -24,7 +23,7 @@
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "chai-like": "^1.1.1",
-    "jest": "^21.2.1",
+    "jest": "^24.8.0",
     "mocha": "^6.1.4",
     "serverless-http-invoker": "^0.8.6",
     "serverless-mocha-plugin": "^1.10.0",
