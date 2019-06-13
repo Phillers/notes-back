@@ -22,7 +22,7 @@ describe('API — notes',() => {
             console.log(result.body);
             expect(result.body).to.include({
               attachment: 'hello.jpg',
-              content: 'hello world',
+              content: 'hello xd world',
             });
             return done();
           });
